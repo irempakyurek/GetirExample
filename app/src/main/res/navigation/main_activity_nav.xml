@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/categoriesFragment">
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.irempakyurek.getirexample.CategoriesFragment"
+        android:label="CategoriesFragment"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/toCategoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_campaignFragment"
+            app:destination="@id/campaignFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.irempakyurek.getirexample.CategoryDetailFragment"
+        android:label="fragment_category_detail"
+        tools:layout="@layout/fragment_category_detail" >
+        <argument
+            android:name="categoryObject"
+            app:argType="com.irempakyurek.getirexample.Category" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.irempakyurek.getirexample.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.irempakyurek.getirexample.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/campaignFragment"
+        android:name="com.irempakyurek.getirexample.CampaignFragment"
+        android:label="fragment_campaign"
+        tools:layout="@layout/fragment_campaign" />
+</navigation>
